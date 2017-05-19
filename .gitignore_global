@@ -1,0 +1,14 @@
+# Git global ignore file
+
+# Ignore dotfiles by default
+.*
+*.[oa]
+*.dep
+*.tmp
+a.out
+*.dSYM/**
+.dep
+
+# Do not ignore
+!.gitignore
+!.gitignore_global

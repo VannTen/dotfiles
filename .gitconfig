@@ -1,0 +1,23 @@
+[user]
+	name = Max Gautier
+	email = mgautier@student.42.fr
+[core]
+	editor = vim
+	excludesfile = /Users/mgautier/.gitignore_global
+[alias]
+	ch = checkout
+	sa = status
+	br = branch
+	ctree = log --graph --all --oneline --decorate
+	update = submodule update --remote
+	pushsub = push --recurse-submodules=on-demand
+	lg1 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(auto)%s%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)' --all
+	lg2 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)%n %C(auto)%B%C(reset)' --all
+	clast = commit --amend --no-edit
+	subs = submodule foreach git
+[diff]
+	submodule = log
+[status]
+	submodulesummary = 1
+[push]
+	default = upstream
