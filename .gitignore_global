@@ -3,6 +3,7 @@
 # Ignore dotfiles by default
 .*
 *.[oa]
+*.so
 *.dep
 *.tmp
 a.out
