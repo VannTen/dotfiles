@@ -8,6 +8,7 @@
 *.tmp
 a.out
 *.dSYM/**
+*.dSYM
 .dep
 
 # Do not ignore
