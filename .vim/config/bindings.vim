@@ -125,3 +125,10 @@ augroup Comments-Bindings
 	autocmd FileType c,cpp nnoremap <buffer> <localleader>c ^i//<esc>
 augroup END
 " }}}
+"
+
+" External commands ------{{{
+
+nnoremap <leader>mk :make<CR>
+
+" }}}
