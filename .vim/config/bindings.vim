@@ -58,6 +58,9 @@ nnoremap <c-u> viwU
 "Frequent Abbrevations ----------------{{{
 iabbrev @@ mgautier@student.42.fr
 iabbrev mg Max Gautier
+iabbrev stdin STDIN_FILENO
+iabbrev stderr STDERR_FILENO
+iabbrev stdout STDOUT_FILENO
 
 " }}}
 
