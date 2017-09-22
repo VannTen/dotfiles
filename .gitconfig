@@ -3,7 +3,7 @@
 	email = mgautier@student.42.fr
 [core]
 	editor = vim
-	excludesfile = /Users/mgautier/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [alias]
 	ch = checkout
 	sa = status
