@@ -2,6 +2,12 @@
 "That file is read by vimrc in the .vim directory
 
 
+" General settings -------------------{{{
+
+set backspace=indent,eol,start
+
+" }}}
+
 " Indentation settings --------------------------{{{
 set tabstop=4       " number of visual spaces per TAB
 set shiftwidth=4	" number of spaces per indent
