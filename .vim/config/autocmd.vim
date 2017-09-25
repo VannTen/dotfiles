@@ -37,6 +37,7 @@ augroup END
 augroup C-commands
 	autocmd!
 	autocmd Filetype c,cpp,make setlocal colorcolumn=80 " Display column limit
+	autocmd Filetype c,cpp setlocal textwidth=80
 	autocmd Filetype c setlocal foldlevel=0
 augroup END
 " }}}
@@ -63,6 +64,7 @@ augroup END
 augroup Comment-Commands
 	autocmd!
 	autocmd Filetype c,cpp setlocal comments=sr:/*,mb:**,ex:*/ "Change the comments auto format - for 42 norm
+	autocmd Filetype c,cpp setlocal formatoptions=croql "Set autowrapping in comments but not elsewhere
 	autocmd FileType c,cpp autocmd BufWritePre <buffer> %s/^* /** /e " Put comments into correct format
 augroup END
 " }}}
