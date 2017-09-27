@@ -29,7 +29,7 @@ augroup Spaces-commands
 	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e " Suppress whitespaces at end of line
 	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/^ \+//e " Suppress whitespaces at beginning of line
 	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/^\s\+$//e " Suppress whitespaces on empty lines
-	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> 12,$s/  \+/ /e " Suppress double whitespaces 
+	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> 12,$s/\([^#]\) \+/\1 /e " Suppress double whitespaces, but not after # (define indentation)
 augroup END
 " }}}
 
