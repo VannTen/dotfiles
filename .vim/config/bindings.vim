@@ -10,9 +10,9 @@ inoremap ii <esc>
 vnoremap ii <esc>
 inoremap <esc> <nop>
 inoremap <leader>q <esc>:quit<CR>
-inoremap <leader>w <esc>:write<CR>
+inoremap <leader>w <esc>:write<CR>``
 inoremap <leader>wq <esc>:write<CR>:quit<CR>
-nnoremap <leader>w :write<CR>
+nnoremap <leader>w :write<CR>``
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>wq :write<CR>:quit<CR>
 nnoremap <leader>aw :wall<CR>
