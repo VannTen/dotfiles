@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Move all file matching pattern (given as first arg)
+if [ $# -lt 1 -o $# -gt 2 ]
+then
+	echo "usage: $0 source_stem [target_stem]"
+	exit 2
+fi
+
+for file_name in $1*
+do
+	echo "$file_name => ${file_name/$1/$2}"
+done
+
+echo "These files will renamed that way. Confirm ? (y/n)"
+read answer
+if echo "$answer" | grep -iq "^y" ;then
+	for file_name in $1*
+	do
+		mv $file_name ${file_name/$1/$2}
+	done
+else
+	echo No
+fi

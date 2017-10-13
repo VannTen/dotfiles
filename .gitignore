@@ -23,3 +23,8 @@
 !.vim/plugin/
 !.vim/syntax/
 !.vimrc
+
+# Custom script
+
+!opt/
+!opt/bin/
