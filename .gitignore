@@ -19,6 +19,7 @@
 
 !/.vim
 /.vim/*
+!.vim/vimrc
 !.vim/config/
 !.vim/plugin/
 !.vim/syntax/
