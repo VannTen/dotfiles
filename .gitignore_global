@@ -10,6 +10,7 @@ a.out
 *.dSYM/**
 *.dSYM
 .dep
+*bin
 
 # Do not ignore
 !.gitignore
