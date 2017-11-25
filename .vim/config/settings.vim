@@ -36,8 +36,8 @@ set title       " Window title = file name
 set statusline=%f  " File Name
 set statusline+=\  " Separator
 set statusline+=%y " Filetype
-set statusline+=\  " Separator
 set statusline+=%m " If file is modified since last write
+set statusline+=%r " Read-only flag.
 set statusline+=\ %{strftime('%c')} " Displays date and time
 set statusline+=%= " Right side
 set statusline+=Line\ 
