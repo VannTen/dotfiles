@@ -12,3 +12,6 @@ highlight link lib42define define
 
 syntax keyword custom_statement RET_TEST
 highlight link custom_statement Statement
+
+syntax keyword custom_constant FALSE TRUE
+highlight link custom_constant Constant
