@@ -13,5 +13,5 @@ highlight link lib42define define
 syntax keyword custom_statement RET_TEST
 highlight link custom_statement Statement
 
-syntax keyword custom_constant FALSE TRUE
+syntax keyword custom_constant FALSE TRUE STDIN_FILENO STDERR_FILENO STDOUT_FILENO
 highlight link custom_constant Constant

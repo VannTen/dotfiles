@@ -93,7 +93,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
-nnoremap <C-X> <C-W><C-X>
 nnoremap ˚ <C-W>+
 nnoremap ∆ <C-W>-
 nnoremap ˙ <C-W>>
@@ -129,7 +128,6 @@ augroup Comments-Bindings
 	autocmd FileType c,cpp nnoremap <buffer> <localleader>c ^i//<esc>
 augroup END
 " }}}
-"
 
 " External commands ------{{{
 

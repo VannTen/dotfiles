@@ -33,7 +33,8 @@ syntax on       " Enables syntax coloring
 set title       " Window title = file name
 
 " Statusline with column number
-set statusline=[%{winnr()}]  " File Name
+set statusline=[%{winnr()}]  " Split number for swapping around
+set statusline+=%< " Where to strip the status line
 set statusline+=%f  " File Name
 set statusline+=\  " Separator
 set statusline+=%y " Filetype
