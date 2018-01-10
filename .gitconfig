@@ -21,3 +21,5 @@
 	submodulesummary = 1
 [push]
 	default = upstream
+[rerere]
+	enabled = true
