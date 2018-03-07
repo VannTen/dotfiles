@@ -15,6 +15,7 @@
 	lg2 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)%n %C(auto)%B%C(reset)' --all
 	clast = commit --amend --no-edit
 	subs = submodule foreach git
+	lg = log --oneline --graph --decorate
 [diff]
 	submodule = log
 [status]
@@ -23,3 +24,5 @@
 	default = upstream
 [rerere]
 	enabled = true
+[commit]
+	verbose = true

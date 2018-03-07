@@ -15,3 +15,4 @@ a.out
 # Do not ignore
 !.gitignore
 !.gitignore_global
+*.lldb
