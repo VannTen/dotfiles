@@ -42,6 +42,15 @@ augroup C-commands
 augroup END
 " }}}
 
+" Markdown files -------{{{
+augroup C-commands
+	autocmd!
+	autocmd Filetype markdown setlocal textwidth=80
+	autocmd Filetype markdown setlocal colorcolumn=+0 " Display column limit
+	autocmd Filetype markdown setlocal foldlevel=0
+augroup END
+" }}}
+
 " Indenting ---------{{{
 
 augroup Indent-Commands
