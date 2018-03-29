@@ -5,6 +5,7 @@
 " General settings -------------------{{{
 
 set backspace=indent,eol,start
+set autoread " discard extraneous error message when auto changing file mode (+x for scripts)
 
 " }}}
 
