@@ -16,3 +16,4 @@ a.out
 !.gitignore
 !.gitignore_global
 *.lldb
+!*.gitlab*

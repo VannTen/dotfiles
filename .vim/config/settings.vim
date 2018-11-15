@@ -35,20 +35,22 @@ set title       " Window title = file name
 
 " Statusline with column number
 set statusline=[%{winnr()}]  " Split number for swapping around
-set statusline+=%< " Where to strip the status line
 set statusline+=%f  " File Name
 set statusline+=\  " Separator
 set statusline+=%y " Filetype
 set statusline+=%m " If file is modified since last write
 set statusline+=%r " Read-only flag.
-set statusline+=\ %{strftime('%c')} " Displays date and time
+set statusline+=%< " Where to strip the status line
+set statusline+=\ %{strftime('%c')}\  " Displays date and time
 set statusline+=%= " Right side
 set statusline+=Line\ 
-set statusline+=%l\ of\ %L "Line number/Number of lines in file
-set statusline+=\ /\ " Separator
-set statusline+=Column\ 
-set statusline+=%c 
+set statusline+=%l/%L "Line number/Number of lines in file
+set statusline+=\ \|\  " Separator
+set statusline+=Col\ 
+set statusline+=%c
 hi StatusLine ctermbg=red ctermfg=black
+
+set laststatus=2 " Always show status line
 
 "Indicate active split with status line
 augroup activeSplitStatusLine

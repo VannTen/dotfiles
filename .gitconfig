@@ -1,9 +1,11 @@
 [user]
 	name = Max Gautier
-	email = mgautier@student.42.fr
+	email = max.gautier@objectif-libre.com
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	pager = less -+F-+X
+	attributesfile = ~/.gitattributes
 [alias]
 	ch = checkout
 	sa = status

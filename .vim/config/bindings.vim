@@ -25,7 +25,6 @@ noremap <Down> <nop>
 noremap <Right> <nop>
 noremap <Left> <nop>
 
-nnoremap <CR> o<esc>
 nnoremap <C-CR> O<esc>
 nnoremap <leader>hl :nohlsearch<CR>
 nnoremap K i<CR><esc>
