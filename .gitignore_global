@@ -16,3 +16,11 @@ a.out
 !.gitignore
 !.gitignore_global
 *.lldb
+# Tex intermediary files
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
+*.aux
