@@ -4,6 +4,9 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	pager = less -+F-+X
+[pager]
+	status = false
 [alias]
 	ch = checkout
 	sa = status
