@@ -23,6 +23,8 @@
 !.vim/config/
 !.vim/plugin/
 !.vim/syntax/
+!.vim/templates/
+!.vim/autoload/
 !.vimrc
 
 # Custom script

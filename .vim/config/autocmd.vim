@@ -78,9 +78,20 @@ augroup Comment-Commands
 augroup END
 " }}}
 
+
+" Templates insertion -----{{{
+
+augroup Templates
+	autocmd!
+	autocmd BufNewFile *.class.{hpp,cpp} call templates#cpp#class#insert()
+augroup END
+
+
+" }}}
+
 " Change write mod ------{{{
 
 augroup Mode
 	autocmd!
-	autocmd BufWritePost *.php silent !chmod u+x <afile>
+"	autocmd BufWritePost *.php silent !chmod u+x <afile>
 augroup END
