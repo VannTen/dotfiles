@@ -1,4 +1,4 @@
-#include "<Class>.class.hpp"
+#include "<file_basename>.hpp"
 
 <Class>::<Class>( void ) {
 
