@@ -83,7 +83,7 @@ augroup END
 
 augroup Templates
 	autocmd!
-	autocmd BufNewFile *.class.{hpp,cpp} call templates#cpp#class#insert()
+	autocmd BufNewFile *.{hpp,cpp} call templates#cpp#class#insert()
 augroup END
 
 
