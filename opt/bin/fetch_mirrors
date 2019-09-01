@@ -1,0 +1,20 @@
+#!/bin/sh
+
+ONLINE_MIRROR_GENERATOR="https://www.archlinux.org/mirrorlist/"
+COUNTRIES="FR GB DE"
+PROTOCOLS="https"
+USE_MIRROR_STATUS=1
+
+url_param ()
+{
+	for value in $2
+	do
+		echo -n "&$1=$value"
+	done
+}
+
+FULL_URL="$ONLINE_MIRROR_GENERATOR\
+?$(url_param country "$COUNTRIES";url_param protocol "$PROTOCOLS";)\
+&use_mirror_status=on"
+#echo $FULL_URL
+curl -s $FULL_URL | sed -e 's/^#Server/Server/' -e '/^#/d'
