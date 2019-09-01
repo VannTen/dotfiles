@@ -1,0 +1,6 @@
+! URxvt
+URxvt*background: black
+URxvt*foreground: white 
+
+! X
+Xcursor.size: 20
