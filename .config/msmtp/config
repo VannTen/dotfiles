@@ -1,0 +1,19 @@
+account work
+host smtp.gmail.com
+port 587
+tls on
+tls_starttls on
+auth oauthbearer
+user "max.gautier@objectif-libre.com"
+passwordeval "oauth2get gmail work"
+from max.gautier@objectif-libre.com
+
+account perso
+host smtp.gmail.com
+port 587
+tls on
+tls_starttls on
+auth oauthbearer
+user "ashelia1000@gmail.com"
+passwordeval "oauth2get gmail perso"
+from ashelia1000@gmail.com

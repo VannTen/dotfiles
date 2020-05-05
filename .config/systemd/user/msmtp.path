@@ -1,0 +1,4 @@
+[Path]
+DirectoryNotEmpty=%h/.local/share/mail_queue
+MakeDirectory=true
+DirectoryMode=0700

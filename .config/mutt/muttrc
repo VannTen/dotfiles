@@ -1,0 +1,26 @@
+# Core settings
+#
+set mbox_type = Maildir
+set spoolfile = +work/Inbox
+set header_cache = ${XDG_CACHE_HOME:-$HOME/.cache}/mutt
+
+set delete = yes # Delete messages
+set mail_check_stats = yes
+set thorough_search # Decodes messages before search
+set timeout = 30
+set wait_key = no # don't wait after external commands
+unset mark_old
+unset move
+#
+
+set sidebar_visible
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_indent_string=→
+set sidebar_relative_shortpath_indent
+set sidebar_width = 40
+
+mailboxes work `find ~/Mail -type d -name cur -printf '"%h" '`
+
+# 
+

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+WIFI_INTERFACE=wlp2s0
+WIRED_INTERFACE=eno1
+
+if [[ "$(cat /sys/class/net/${WIRED_INTERFACE}/operstate)" = 'up' ]]; then
+	echo "" # \uf6ff
+	echo "" # \uf6ff
+	echo "#66ff00"
+elif [[ "$(cat /sys/class/net/${WIFI_INTERFACE}/operstate)" = 'up' ]]; then
+	QUALITY=$(grep $WIFI_INTERFACE /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
+	ESSID=$(iwgetid -r)
+	if [ "$ESSID" != "" ];then
+		# Full text
+		echo -n "" # \uf1eb
+		echo " $ESSID"
+		# Short text
+		echo -n "" # \uf1eb
+		echo " $ESSID"
+		# Color
+		if [[ "$QUALITY" -ge 75 ]];then
+			echo "#66ff00"
+		elif [[ "$QUALITY" -ge 40 ]];then
+			echo "#ff6700"
+		else
+			echo "#ff0000"
+		fi
+	else
+		# Full and short (Wifi up but no network)
+		echo "" # \uf1eb
+		echo "" # \uf1eb
+		echo "#ff0000"
+	fi
+
+else
+	echo "" # \uf6ac
+	echo "" # \uf6ac
+	echo "#ff0000"
+fi

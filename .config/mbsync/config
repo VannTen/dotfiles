@@ -1,0 +1,27 @@
+IMAPAccount gmail-work
+Host imap.gmail.com
+User max.gautier@objectif-libre.com
+PassCmd "oauth2get gmail work"
+SSLType IMAPS
+
+IMAPStore gmail-work
+Account gmail-work
+
+MaildirStore gmail-local
+SubFolders Verbatim
+Path ~/Mail/work/
+Inbox ~/Mail/work/Inbox
+
+Channel gmail
+Master :gmail-work:
+Slave :gmail-local:
+# Exclude everything under the internal [Gmail] folder, except the interesting folders
+#Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"
+Patterns INBOX Clients
+#"Dossiers partagés/travel/MGautier"
+# Or include everything
+#Patterns *
+# Automatically create missing mailboxes, both locally and on the server
+Create Both
+# Save the synchronization state files in the relevant directory
+SyncState *
