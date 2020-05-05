@@ -1,0 +1,14 @@
+#!/bin/sh -e
+
+
+head=${2:-$(git rev-parse --abbrev-ref HEAD)}
+
+ahead=$(git rev-list --right-only --count $1...$head)
+behind=$(git rev-list --left-only --count $1...$head)
+
+if [ $ahead -a $behind ]; then
+	cat <<-EOF
+	$1 is $ahead commits ahead,
+	$behind commits behind $head.
+	EOF
+fi

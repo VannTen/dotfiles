@@ -28,7 +28,6 @@ noremap <Left> <nop>
 nnoremap <CR> o<esc>
 nnoremap <C-CR> O<esc>
 nnoremap <leader>hl :nohlsearch<CR>
-nnoremap K i<CR><esc>
 
 nnoremap <BS>sw :!rm ~/.vim/swap/*<CR><CR>
 
@@ -51,8 +50,6 @@ vnoremap <leader>( c()<esc>P
 vnoremap <leader>[ c[]<esc>P
 vnoremap <leader>{ c{}<esc>Pgg=G``
 
-inoremap <c-u> <esc>viwU<esc>i
-nnoremap <c-u> viwU
 " }}}
 
 "Frequent Abbrevations ----------------{{{

@@ -26,10 +26,10 @@ augroup END
 
 augroup Spaces-commands
 	autocmd!
-	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e " Suppress whitespaces at end of line
-	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/^ \+//e " Suppress whitespaces at beginning of line
-	autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/^\s\+$//e " Suppress whitespaces on empty lines
-	autocmd FileType c,cpp autocmd BufWritePre <buffer> 12,$s/\([^#]\) \+/\1 /e " Suppress double whitespaces, but not after # (define indentation)
+	"autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/\s\+$//e " Suppress whitespaces at end of line
+	"autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/^ \+//e " Suppress whitespaces at beginning of line
+	"autocmd FileType c,cpp,java,php autocmd BufWritePre <buffer> %s/^\s\+$//e " Suppress whitespaces on empty lines
+	"autocmd FileType c,cpp autocmd BufWritePre <buffer> 12,$s/\([^#]\) \+/\1 /e " Suppress double whitespaces, but not after # (define indentation)
 augroup END
 " }}}
 
@@ -74,7 +74,7 @@ augroup Comment-Commands
 	autocmd!
 	autocmd Filetype c,cpp setlocal comments=sr:/*,mb:**,ex:*/ "Change the comments auto format - for 42 norm
 	autocmd Filetype c,cpp,make setlocal formatoptions=croql "Set autowrapping in comments but not elsewhere
-	autocmd FileType c,cpp autocmd BufWritePre <buffer> %s/^* /** /e " Put comments into correct format
+"	autocmd FileType c,cpp autocmd BufWritePre <buffer> %s/^* /** /e " Put comments into correct format
 augroup END
 " }}}
 
