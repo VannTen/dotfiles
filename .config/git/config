@@ -29,6 +29,9 @@
 	enabled = true
 [commit]
 	verbose = true
+[sendemail]
+	smtpServer = /usr/bin/msmtpq-systemd
+	suppresscc = self
 
-[includeIf "gitdir:~/opensource/"]
-	path = ~/opensource/git_config
+[includeIf "gitdir:~/perso/"]
+	path = perso

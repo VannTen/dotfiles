@@ -1,5 +1,0 @@
-[Service]
-Type=oneshot
-ExecStart=flush-mail-queue %h/.local/share/mail_queue
-Restart=on-failure
-RestartSec=10min

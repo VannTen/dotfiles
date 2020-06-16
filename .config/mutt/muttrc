@@ -1,8 +1,9 @@
 # Core settings
 #
 set mbox_type = Maildir
-set spoolfile = +work/Inbox
-set header_cache = ${XDG_CACHE_HOME:-$HOME/.cache}/mutt
+set spoolfile = +perso
+set header_cache = ${HOME}/.cache/mutt
+set sleep_time = 0
 
 set delete = yes # Delete messages
 set mail_check_stats = yes
@@ -11,6 +12,14 @@ set timeout = 30
 set wait_key = no # don't wait after external commands
 unset mark_old
 unset move
+set copy = no
+
+# Identity
+
+set realname = "Max Gautier"
+# Pager
+
+set markers = no
 #
 
 set sidebar_visible
@@ -19,8 +28,30 @@ set sidebar_folder_indent
 set sidebar_indent_string=→
 set sidebar_relative_shortpath_indent
 set sidebar_width = 40
+set sidebar_sort_method = alpha
 
-mailboxes work `find ~/Mail -type d -name cur -printf '"%h" '`
+set sort=reverse-date
+
+mailboxes `find ~/Mail -type d -name cur -printf '"%h" '`
 
 # 
 
+set my_mailboxes = "`find ~/Mail/commun -type d -name cur -printf '"%h" '`"
+set sendmail="/usr/bin/msmtpq-systemd"
+
+# Hooks
+#
+folder-hook +work source '~/.config/mutt/work'
+folder-hook +perso source '~/.config/mutt/perso'
+folder-hook +commun source '~/.config/mutt/commun'
+folder-hook !+commun unmailboxes $my_mailboxes
+folder-hook +commun mailboxes $my_mailboxes
+
+# Auto view
+#
+set mailcap_path = ~/.config/mutt/mailcap
+
+alternative_order text/plain text/html
+auto_view text/html
+
+source ~/.config/mutt/colorschemes/linux

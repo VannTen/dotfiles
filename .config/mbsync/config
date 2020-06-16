@@ -3,6 +3,7 @@ Host imap.gmail.com
 User max.gautier@objectif-libre.com
 PassCmd "oauth2get gmail work"
 SSLType IMAPS
+AuthMechs XOAUTH2
 
 IMAPStore gmail-work
 Account gmail-work
@@ -10,18 +11,51 @@ Account gmail-work
 MaildirStore gmail-local
 SubFolders Verbatim
 Path ~/Mail/work/
-Inbox ~/Mail/work/Inbox
+Inbox ~/Mail/work
 
 Channel gmail
 Master :gmail-work:
 Slave :gmail-local:
-# Exclude everything under the internal [Gmail] folder, except the interesting folders
-#Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/Starred" "[Gmail]/All Mail"
-Patterns INBOX Clients
-#"Dossiers partagés/travel/MGautier"
-# Or include everything
-#Patterns *
 # Automatically create missing mailboxes, both locally and on the server
 Create Both
 # Save the synchronization state files in the relevant directory
+SyncState *
+
+
+IMAPStore gmail-perso
+Host imap.gmail.com
+User ashelia1000@gmail.com
+PassCmd "oauth2get gmail perso"
+SSLType IMAPS
+AuthMechs XOAUTH2
+
+MaildirStore perso
+SubFolders Verbatim
+Path ~/Mail/perso/
+Inbox ~/Mail/perso
+
+Channel perso
+Master :gmail-perso:
+Slave :perso:
+Patterns INBOX promo notifs lists
+Create Both
+SyncState *
+
+IMAPStore gmail-commun
+Host imap.gmail.com
+User mabilatgautier@gmail.com
+PassCmd "oauth2get gmail commun"
+SSLType IMAPS
+AuthMechs XOAUTH2
+
+MaildirStore commun
+SubFolders Verbatim
+Path ~/Mail/commun/
+Inbox ~/Mail/commun
+
+Channel commun
+Master :gmail-commun:
+Slave :commun:
+Patterns * ![Gmail]/*
+Create Both
 SyncState *
