@@ -1,5 +1,6 @@
 # Core settings
 #
+#
 set mbox_type = Maildir
 set spoolfile = +perso
 set header_cache = ${HOME}/.cache/mutt
@@ -55,3 +56,8 @@ alternative_order text/plain text/html
 auto_view text/html
 
 source ~/.config/mutt/colorschemes/linux
+
+# Macro
+
+
+macro index,pager  "<enter-command>set pipe_decode = yes<enter><pipe-message>urlscan<enter><enter-command>set pipe_decode = no<enter>" "view URLs"

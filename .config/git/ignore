@@ -10,7 +10,6 @@ a.out
 *.dSYM/**
 *.dSYM
 .dep
-*bin
 
 # Do not ignore
 !.gitignore
@@ -25,3 +24,8 @@ a.out
 *.snm
 *.toc
 *.aux
+
+# Archives
+
+*.tar.gz
+*.tar.xz
