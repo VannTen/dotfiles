@@ -1,6 +1,6 @@
 [user]
 	name = Max Gautier
-	email = mgautier@objectif-libre.com
+	email = max.gautier@objectif-libre.com
 [core]
 	editor = vim
 	pager = less -+F-+X
@@ -31,7 +31,14 @@
 	verbose = true
 [sendemail]
 	smtpServer = /usr/bin/msmtpq-systemd
-	suppresscc = self
+	annotate = true
 
 [includeIf "gitdir:~/perso/"]
 	path = perso
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
+[gitreview]
+	username = mgautier

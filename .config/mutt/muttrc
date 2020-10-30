@@ -31,10 +31,14 @@ set sidebar_relative_shortpath_indent
 set sidebar_width = 40
 set sidebar_sort_method = alpha
 
-set sort=reverse-date
+set sort=threads
+set sort_aux=reverse-last-date-received
 
 mailboxes `find ~/Mail -type d -name cur -printf '"%h" '`
 
+# Mailing lists
+
+lists libc-
 # 
 
 set my_mailboxes = "`find ~/Mail/commun -type d -name cur -printf '"%h" '`"
@@ -44,9 +48,11 @@ set sendmail="/usr/bin/msmtpq-systemd"
 #
 folder-hook +work source '~/.config/mutt/work'
 folder-hook +perso source '~/.config/mutt/perso'
+folder-hook +mailbox source '~/.config/mutt/mailbox'
 folder-hook +commun source '~/.config/mutt/commun'
 folder-hook !+commun unmailboxes $my_mailboxes
 folder-hook +commun mailboxes $my_mailboxes
+folder-hook +perso/lists source '~/.config/mutt/lists'
 
 # Auto view
 #

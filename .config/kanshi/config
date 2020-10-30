@@ -1,0 +1,9 @@
+profile {
+	output "Dell Inc. DELL U2414H 9TG4645J4YYL" position 0,0
+	output eDP-1 position 0,1080
+}
+
+profile {
+	output eDP-1 position 0,0
+	output "Samsung Electric Company S24D330 0x00005B31" position 1920,0
+}

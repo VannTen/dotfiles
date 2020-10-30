@@ -1,0 +1,1 @@
+/opt/kube-ps1/kube-ps1.sh

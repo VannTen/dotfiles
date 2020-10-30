@@ -53,8 +53,7 @@ vnoremap <leader>{ c{}<esc>Pgg=G``
 " }}}
 
 "Frequent Abbrevations ----------------{{{
-iabbrev @@ mgautier@student.42.fr
-iabbrev mg Max Gautier
+iabbrev @@ mg@max.gautier.name
 iabbrev stdin STDIN_FILENO
 iabbrev stderr STDERR_FILENO
 iabbrev stdout STDOUT_FILENO
