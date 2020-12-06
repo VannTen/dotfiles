@@ -15,6 +15,7 @@ a.out
 !.gitignore
 !.gitignore_global
 !.gitlab-ci*
+!.SRCINFO
 *.lldb
 # Tex intermediary files
 *.log

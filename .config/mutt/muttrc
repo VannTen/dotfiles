@@ -46,6 +46,7 @@ set sendmail="/usr/bin/msmtpq-systemd"
 
 # Hooks
 #
+folder-hook . set signature=""
 folder-hook +work source '~/.config/mutt/work'
 folder-hook +perso source '~/.config/mutt/perso'
 folder-hook +mailbox source '~/.config/mutt/mailbox'

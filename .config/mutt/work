@@ -1,4 +1,4 @@
 # Work account conf
 set from="max.gautier@objectif-libre.com"
 set editor='vim --cmd "setlocal keymap=fr spell spelllang=fr"'
-
+set signature='~/.config/mutt/work-sig'

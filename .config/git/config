@@ -35,6 +35,8 @@
 
 [includeIf "gitdir:~/perso/"]
 	path = perso
+[includeIf "gitdir:~/perso/archlinux/"]
+	path = archlinux
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
