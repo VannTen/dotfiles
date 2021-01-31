@@ -15,6 +15,7 @@
 !.gitignore_global
 !.gitconfig
 !.config/
+!.ssh/config
 
 # vim
 
