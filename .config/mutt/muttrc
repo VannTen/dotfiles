@@ -53,7 +53,6 @@ folder-hook +mailbox source '~/.config/mutt/mailbox'
 folder-hook +commun source '~/.config/mutt/commun'
 folder-hook !+commun unmailboxes $my_mailboxes
 folder-hook +commun mailboxes $my_mailboxes
-folder-hook +perso/lists source '~/.config/mutt/lists'
 
 # Auto view
 #

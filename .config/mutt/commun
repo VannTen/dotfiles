@@ -1,3 +1,4 @@
 # Commun 
 
 set from="mabilatgautier@gmail.com"
+set signature='~/.config/mutt/commun-sig'

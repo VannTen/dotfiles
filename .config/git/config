@@ -44,3 +44,7 @@
 	prompt = false
 [gitreview]
 	username = mgautier
+[init]
+	defaultBranch = main
+[rebase]
+	autoSquash = true

@@ -46,3 +46,5 @@ set splitbelow
 set splitright
 
 set backup
+
+set updatetime=2000
