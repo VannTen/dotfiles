@@ -39,8 +39,8 @@ set incsearch   " search while characters are entered
 set hlsearch    " higlight match
 
 set foldenable
-set foldlevelstart=10   " control fold level
 set foldmethod=syntax
+set foldlevelstart=99
 
 set splitbelow
 set splitright
@@ -48,3 +48,9 @@ set splitright
 set backup
 
 set updatetime=2000
+
+" Whitespaces and indent
+
+set shiftwidth=4
+set tabstop=4
+set expandtab 

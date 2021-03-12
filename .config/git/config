@@ -18,6 +18,7 @@
 	clast = commit --amend --no-edit
 	subs = submodule foreach git
 	lg = log --oneline --graph --decorate
+	dupes = !"cd `pwd`/$GIT_PREFIX && git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
 [diff]
 	submodule = log
 	tool = vimdiff
