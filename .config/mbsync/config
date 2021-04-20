@@ -14,8 +14,8 @@ Path ~/Mail/work/
 Inbox ~/Mail/work
 
 Channel gmail
-Master :gmail-work:
-Slave :gmail-local:
+Far :gmail-work:
+Near :gmail-local:
 # Automatically create missing mailboxes, both locally and on the server
 Create Both
 # Save the synchronization state files in the relevant directory
@@ -35,8 +35,8 @@ Path ~/Mail/perso/
 Inbox ~/Mail/perso
 
 Channel perso
-Master :gmail-perso:
-Slave :perso:
+Far :gmail-perso:
+Near :perso:
 Patterns INBOX promo notifs lists
 Create Both
 SyncState *
@@ -54,8 +54,25 @@ Path ~/Mail/commun/
 Inbox ~/Mail/commun
 
 Channel commun
-Master :gmail-commun:
-Slave :commun:
+Far :gmail-commun:
+Near :commun:
 Patterns * ![Gmail]/*
+Create Both
+SyncState *
+
+IMAPStore mailbox
+Host imap.mailbox.org
+SSLType IMAPS
+User mg@max.gautier.name
+
+MaildirStore mailbox-local
+SubFolders Verbatim
+Path ~/Mail/mailbox/
+Inbox ~/Mail/mailbox
+
+Channel mailbox
+Far :mailbox:
+Near :mailbox-local:
+Patterns INBOX archlinux
 Create Both
 SyncState *

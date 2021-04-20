@@ -27,3 +27,12 @@ auth oauthbearer
 user "mabilatgautier@gmail.com"
 passwordeval "oauth2get gmail commun"
 from mabilatgautier@gmail.com
+
+account mailbox
+host smtp.mailbox.org
+port 587
+tls on
+tls_starttls on
+auth on
+user "mg@max.gautier.name"
+from mg@max.gautier.name

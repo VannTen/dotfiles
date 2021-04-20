@@ -67,3 +67,7 @@ source ~/.config/mutt/colorschemes/linux
 
 
 macro index,pager  "<enter-command>set pipe_decode = yes<enter><pipe-message>urlscan<enter><enter-command>set pipe_decode = no<enter>" "view URLs"
+
+# Bypass prompts
+set edit_headers = yes
+set autoedit
