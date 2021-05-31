@@ -2,3 +2,8 @@ bindsym $mod+p exec grimshot save active
 bindsym $mod+Shift+p exec grimshot save area
 bindsym $mod+Mod1+p exec grimshot save output
 bindsym $mod+Ctrl+p exec grimshot save window
+
+bindsym $mod+c exec grimshot copy active
+bindsym $mod+Shift+c exec grimshot copy area
+bindsym $mod+Mod1+c exec grimshot copy output
+bindsym $mod+Ctrl+c exec grimshot copy window

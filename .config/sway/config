@@ -4,7 +4,7 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-xwayland disable
+#xwayland disable
 # This is just for boasting
 
 ### Variables
@@ -73,7 +73,7 @@ set $menu bemenu-run
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym --to-code $mod+Shift+c reload
+    bindsym --to-code $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym --to-code $mod+Shift+e exec swaymsg exit
