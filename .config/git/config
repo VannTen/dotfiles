@@ -12,7 +12,6 @@
 	br = branch
 	ctree = log --graph --all --oneline --decorate
 	update = submodule update --remote
-	pushsub = push --recurse-submodules=on-demand
 	lg1 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(auto)%s%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)' --all
 	lg2 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)%n %C(auto)%B%C(reset)' --all
 	clast = commit --amend --no-edit
@@ -20,14 +19,16 @@
 	lg = log --oneline --graph --decorate
 	dupes = !"cd `pwd`/$GIT_PREFIX && git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
 [diff]
-	submodule = log
+	submodule = diff
 	tool = vimdiff
 [status]
 	submodulesummary = 1
 [push]
 	default = upstream
+	recurseSubmodules = on-demand
 [rerere]
 	enabled = true
+	autoupdate = true
 [commit]
 	verbose = true
 [sendemail]

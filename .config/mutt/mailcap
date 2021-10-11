@@ -1,5 +1,7 @@
 text/html; firejail --quiet --net=none w3m -o display_link_number -I %{charset} -T text/html -dump; copiousoutput
+text/calendar; vcal %s; copiousoutput
 image/*; imv -f %s
 application/pdf; zathura %s
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
 application/vnd.oasis.opendocument.text; libreoffice %s

@@ -1,6 +1,6 @@
 profile {
 	output "Dell Inc. DELL U2414H 9TG4645J4YYL" position 0,0
-	output eDP-1 position 0,1080
+	output eDP-1 position 1920,0
 }
 
 profile {

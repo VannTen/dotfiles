@@ -2,7 +2,7 @@ function! s:on_lsp_buffer_enabled() abort
 	setlocal omnifunc=lsp#complete
 	setlocal signcolumn=auto
 	setlocal tagfunc=lsp#tagfunc
-	nmap <buffer> gd <plug>(lsp-definition)
+	nmap <buffer> <C-]> <plug>(lsp-definition)
 	nmap <buffer> <f2> <plug>(lsp-rename)
 endfunction
 
