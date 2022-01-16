@@ -9,3 +9,4 @@ pager:
 # Aliases allow you to create nicknames for gh commands
 aliases:
     co: pr checkout
+    activity: pr list --search "-label:lifecycle/stale -label:lifecycle/rotten sort:updated-desc"

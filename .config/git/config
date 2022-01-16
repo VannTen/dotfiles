@@ -2,7 +2,6 @@
 	name = Max Gautier
 	email = max.gautier@objectif-libre.com
 [core]
-	editor = vim
 	pager = less -+F-+X
 [pager]
 	status = false
@@ -21,6 +20,7 @@
 [diff]
 	submodule = diff
 	tool = vimdiff
+	wsErrorHighlight = all
 [status]
 	submodulesummary = 1
 [push]

@@ -5,3 +5,4 @@ alias oldocs-make='docker run --rm -v $PWD:/data -w /data registry.gitlab.object
 alias ol-kubeval='docker container run --rm -v $PWD:/data -w /data registry.gitlab.objectif-libre.com/ol/dockerfiles/formation-ci/kubeval gen_junit.sh'
 alias ol-doc-linkcheck='docker container run --rm -v $PWD:/data -w /data registry.gitlab.objectif-libre.com/ol/dockerfiles/formation-ci/builder make SPHINXBUILDER=linkcheck'
 alias ol-doc-make-new='docker container run --rm -v $PWD:/data -w /data registry.gitlab.objectif-libre.com/ol/dockerfiles/formation-ci/builder:factorized_ci make -f /Makefile'
+alias dac-build='docker run --rm -it -e DEFAULT_DESTINATION=/documents/build.${LANGUAGE:-fr}/ -v ${PWD}/:/documents/ ${DAC_DOCKER_IMAGE:-registry.gitlab.objectif-libre.com/formation/dac_tooling/docascode:ol} build'

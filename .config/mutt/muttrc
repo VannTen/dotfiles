@@ -58,7 +58,7 @@ folder-hook +commun mailboxes $my_mailboxes
 #
 set mailcap_path = ~/.config/mutt/mailcap
 
-alternative_order text/plain text/html
+alternative_order text/calendar text/plain text/html
 auto_view text/html text/calendar
 
 source ~/.config/mutt/colorschemes/linux

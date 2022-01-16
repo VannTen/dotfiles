@@ -35,4 +35,5 @@ tls on
 tls_starttls on
 auth on
 user "mg@max.gautier.name"
+password "i8UWQuDnXG92v792"
 from mg@max.gautier.name

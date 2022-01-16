@@ -16,11 +16,17 @@ Inbox ~/Mail/work
 Channel gmail
 Far :gmail-work:
 Near :gmail-local:
-# Automatically create missing mailboxes, both locally and on the server
-Create Both
+# Automatically create missing mailboxes on server only
+Create Far
+Patterns *
 # Save the synchronization state files in the relevant directory
 SyncState *
 
+Channel gmail-special-folders
+Far ":gmail-work:[Gmail]/Sent Mail"
+Near :gmail-local:sent
+Create Near
+SyncState *
 
 IMAPStore gmail-perso
 Host imap.gmail.com
@@ -61,9 +67,10 @@ Create Both
 SyncState *
 
 IMAPStore mailbox
-Host imap.mailbox.org
+Host imap.mailbox.org 
 SSLType IMAPS
-User mg@max.gautier.name
+User mg@max.gautier.name 
+Pass "i8UWQuDnXG92v792"
 
 MaildirStore mailbox-local
 SubFolders Verbatim
