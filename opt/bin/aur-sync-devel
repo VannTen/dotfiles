@@ -1,0 +1,2 @@
+#!/bin/bash
+aur sync "$@" $(aur vercmp-devel)

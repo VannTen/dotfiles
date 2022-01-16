@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec aur sync -c -u --rebuild $(aur vercmp-devel)
