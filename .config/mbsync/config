@@ -18,7 +18,7 @@ Far :gmail-work:
 Near :gmail-local:
 # Automatically create missing mailboxes on server only
 Create Far
-Patterns *
+Patterns INBOX archives kubernetes openstack
 # Save the synchronization state files in the relevant directory
 SyncState *
 

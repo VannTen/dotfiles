@@ -21,7 +21,7 @@ set realname = "Max Gautier"
 # Pager
 
 set markers = no
-#
+set pager_index_lines = 1
 
 set sidebar_visible
 set sidebar_short_path
