@@ -3,5 +3,7 @@ text/calendar; vcal %s; copiousoutput
 image/*; imv -f %s
 application/pdf; zathura %s
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s
+application/vnd.ms-excel.sheet.macroenabled.12; libreoffice %s
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
+application/vnd.openxmlformats-officedocument.presentationml.presentation; libreoffice %s
 application/vnd.oasis.opendocument.text; libreoffice %s

@@ -1,6 +1,4 @@
 # Core settings
-#
-#
 set mbox_type = Maildir
 set spoolfile = +perso
 set header_cache = ${HOME}/.cache/mutt
@@ -13,13 +11,11 @@ set timeout = 30
 set wait_key = no # don't wait after external commands
 unset mark_old
 unset move
-set copy = no
 
 # Identity
-
 set realname = "Max Gautier"
-# Pager
 
+# Pager
 set markers = no
 set pager_index_lines = 1
 
@@ -34,7 +30,7 @@ set sidebar_sort_method = alpha
 set sort=threads
 set sort_aux=reverse-last-date-received
 
-mailboxes `find ~/Mail -type d -name cur -printf '"%h" '`
+mailboxes `find ~/Mail -type d -name archive -prune -o -name cur -printf '"%h" '`
 
 # Mailing lists
 
@@ -46,6 +42,12 @@ set sendmail="/usr/bin/msmtpq-systemd"
 
 # Hooks
 #
+folder-hook . 'set record=^'
+save-hook . '=%b/archive'
+macro index,pager s "<save-message><enter>" "Save message to default location"
+macro index,pager S "<save-message>" "Save message to mailbox"
+set confirmappend=no
+
 folder-hook . set signature=""
 folder-hook +work source '~/.config/mutt/work'
 folder-hook +perso source '~/.config/mutt/perso'
