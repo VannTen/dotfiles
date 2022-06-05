@@ -1,6 +1,6 @@
 [user]
 	name = Max Gautier
-	email = max.gautier@objectif-libre.com
+	email = mg@max.gautier.name
 [core]
 	pager = less -+F-+X
 [pager]
@@ -35,8 +35,6 @@
 	smtpServer = /usr/bin/msmtpq-systemd
 	annotate = true
 
-[includeIf "gitdir:~/perso/"]
-	path = perso
 [includeIf "gitdir:~/perso/archlinux/"]
 	path = archlinux
 [merge]
