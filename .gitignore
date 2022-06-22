@@ -29,6 +29,10 @@
 !.vim/autoload/
 !.vimrc
 
+# Bash
+
+!.bashrc
+
 # Custom script
 
 !opt/
