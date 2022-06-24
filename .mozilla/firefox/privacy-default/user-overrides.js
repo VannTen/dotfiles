@@ -11,11 +11,11 @@ user_pref("privacy.clearOnShutdown.history", false); // 2811
  * [NOTE] This does not affect explicit user action such as using search buttons in the
  * dropdown, or using keyword search shortcuts you configure in options (e.g. "d" for DuckDuckGo)
  * [SETUP-CHROME] Override this if you trust and use a privacy respecting search engine ***/
-// user_pref("keyword.enabled", true);
+user_pref("keyword.enabled", true);
 /* 0804: disable live search suggestions
  * [NOTE] Both must be true for the location bar to work
  * [SETUP-CHROME] Override these if you trust and use a privacy respecting search engine
  * [SETTING] Search>Provide search suggestions | Show search suggestions in address bar results ***/
-//user_pref("browser.search.suggest.enabled", true);
-//user_pref("browser.urlbar.suggest.searches", true);
+user_pref("browser.search.suggest.enabled", true);
+user_pref("browser.urlbar.suggest.searches", true);
 // pending on using searx
