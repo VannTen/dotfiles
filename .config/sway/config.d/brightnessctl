@@ -1,0 +1,8 @@
+bindsym --to-code XF86MonBrightnessUp exec brightnessctl set +2%
+bindsym --to-code XF86MonBrightnessDown exec brightnessctl set 2%-
+bindsym --to-code Shift+XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym --to-code Shift+XF86MonBrightnessDown exec brightnessctl set 5%-
+bindsym --to-code XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym --to-code XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym --to-code XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym --to-code XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
