@@ -42,3 +42,11 @@
 .config/user-dirs.dirs
 .config/user-dirs.locale
 .config/pulse/cookie
+
+# Firefox Policies && Arkenfox user.js override
+
+!/.mozilla/
+.mozilla/**/*
+!/.mozilla/firefox
+!/.mozilla/firefox/privacy-default
+!/.mozilla/firefox/privacy-default/user-overrides.js
