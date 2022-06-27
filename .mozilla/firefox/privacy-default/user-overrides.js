@@ -18,4 +18,27 @@ user_pref("keyword.enabled", true);
  * [SETTING] Search>Provide search suggestions | Show search suggestions in address bar results ***/
 user_pref("browser.search.suggest.enabled", true);
 user_pref("browser.urlbar.suggest.searches", true);
-// pending on using searx
+// Personnal note : using searx (public instances)
+
+/* 4504: enable RFP letterboxing [FF67+]
+ * Dynamically resizes the inner window by applying margins in stepped ranges [2]
+ * If you use the dimension pref, then it will only apply those resolutions.
+ * The format is "width1xheight1, width2xheight2, ..." (e.g. "800x600, 1000x1000")
+ * [SETUP-WEB] This is independent of RFP (4501). If you're not using RFP, or you are but
+ * dislike the margins, then flip this pref, keeping in mind that it is effectively fingerprintable
+ * [WARNING] DO NOT USE: the dimension pref is only meant for testing
+ * [1] https://bugzilla.mozilla.org/1407366
+ * [2] https://hg.mozilla.org/mozilla-central/rev/6d2d7856e468#l2.32 ***/
+user_pref("privacy.resistFingerprinting.letterboxing", false); // [HIDDEN PREF]
+
+/* 4520: disable WebGL (Web Graphics Library)
+ * [SETUP-WEB] If you need it then override it. RFP still randomizes canvas for naive scripts ***/
+user_pref("webgl.disabled", false);
+
+// Hardware acceleration
+
+user_pref("media.ffmpeg.vaapi.enabled", true);
+user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
+
+/* END: custom check for achievement award ***/
+user_pref("_user.js.parrot", "Fukyeah™, I survived the overrides and got this T-Shirt");
