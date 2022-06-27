@@ -1,0 +1,11 @@
+[Unit]
+Description=Create a new kerberos ticket for identity %I
+After=sys-devices-virtual-net-redhat0.device
+Requires=sys-devices-virtual-net-redhat0.device
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/kinit -k -t ${HOME}/.local/state/kerberos/idm.keytab %I
+
+[Install]
+WantedBy=sys-devices-virtual-net-redhat0.device

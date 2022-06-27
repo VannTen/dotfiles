@@ -40,5 +40,9 @@ user_pref("webgl.disabled", false);
 user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
 
+// Kerberos
+
+user_pref("network.negotiate-auth.trusted-uris", ".redhat.com");
+
 /* END: custom check for achievement award ***/
 user_pref("_user.js.parrot", "Fukyeah™, I survived the overrides and got this T-Shirt");
