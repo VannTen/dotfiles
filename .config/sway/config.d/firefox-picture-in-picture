@@ -1,0 +1,3 @@
+for_window [app_id="firefox" title="^Picture-in-Picture$"] \
+    floating enable, \
+    move position 66 ppt 63 ppt, sticky enable, border none
