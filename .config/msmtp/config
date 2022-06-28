@@ -1,18 +1,16 @@
-account work
+account redhat
 host smtp.gmail.com
-port 587
 tls on
-tls_starttls on
+tls_starttls off
 auth oauthbearer
-user "max.gautier@objectif-libre.com"
-passwordeval "oauth2get gmail work"
-from max.gautier@objectif-libre.com
+user "magautie@redhat.com"
+passwordeval "oauth2get gmail redhat"
+from max.gautier@redhat.com
 
 account perso
 host smtp.gmail.com
-port 587
 tls on
-tls_starttls on
+tls_starttls off
 auth oauthbearer
 user "ashelia1000@gmail.com"
 passwordeval "oauth2get gmail perso"
@@ -20,9 +18,8 @@ from ashelia1000@gmail.com
 
 account commun
 host smtp.gmail.com
-port 587
 tls on
-tls_starttls on
+tls_starttls off
 auth oauthbearer
 user "mabilatgautier@gmail.com"
 passwordeval "oauth2get gmail commun"
@@ -30,10 +27,8 @@ from mabilatgautier@gmail.com
 
 account mailbox
 host smtp.mailbox.org
-port 587
 tls on
-tls_starttls on
+tls_starttls off
 auth on
 user "mg@max.gautier.name"
-password "i8UWQuDnXG92v792"
 from mg@max.gautier.name

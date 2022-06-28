@@ -1,0 +1,3 @@
+# Work account conf
+set from="max.gautier@redhat.com"
+set editor='vim --cmd "setlocal spell"'

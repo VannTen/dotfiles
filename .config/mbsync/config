@@ -1,7 +1,7 @@
 IMAPAccount gmail-work
 Host imap.gmail.com
-User max.gautier@objectif-libre.com
-PassCmd "oauth2get gmail work"
+User magautie@redhat.com
+PassCmd "oauth2get gmail redhat"
 SSLType IMAPS
 AuthMechs XOAUTH2
 
@@ -10,23 +10,23 @@ Account gmail-work
 
 MaildirStore gmail-local
 SubFolders Verbatim
-Path ~/Mail/work/
-Inbox ~/Mail/work
+Path ~/Mail/redhat
+Inbox ~/Mail/redhat
 
-Channel gmail
+Channel redhat
 Far :gmail-work:
 Near :gmail-local:
 # Automatically create missing mailboxes on server only
 Create Far
-Patterns INBOX archives kubernetes openstack
-# Save the synchronization state files in the relevant directory
+Patterns INBOX archive
+## Save the synchronization state files in the relevant directory
 SyncState *
 
-Channel gmail-special-folders
-Far ":gmail-work:[Gmail]/Sent Mail"
-Near :gmail-local:sent
-Create Near
-SyncState *
+#Channel gmail-special-folders
+#Far ":gmail-work:[Gmail]/Sent Mail"
+#Near :gmail-local:sent
+#Create Near
+#SyncState *
 
 IMAPStore gmail-perso
 Host imap.gmail.com
@@ -43,7 +43,7 @@ Inbox ~/Mail/perso
 Channel perso
 Far :gmail-perso:
 Near :perso:
-Patterns INBOX promo notifs lists
+Patterns INBOX promo notifs lists archive
 Create Both
 SyncState *
 
@@ -67,10 +67,10 @@ Create Both
 SyncState *
 
 IMAPStore mailbox
-Host imap.mailbox.org 
+Host imap.mailbox.org
 SSLType IMAPS
-User mg@max.gautier.name 
-Pass "i8UWQuDnXG92v792"
+User mg@max.gautier.name
+PassCmd "secret-tool lookup host smtp.mailbox.org user mg@max.gautier.name"
 
 MaildirStore mailbox-local
 SubFolders Verbatim

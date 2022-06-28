@@ -1,6 +1,5 @@
 [Service]
-Environment="XDG_CONFIG_HOME=%h/.config"
 Type=oneshot
-ExecStart=/usr/bin/mbsync -c ${XDG_CONFIG_HOME}/mbsync/config -V --all
+ExecStart=/usr/bin/mbsync -c %E/mbsync/config -V %i
 Restart=on-failure
 RestartSec=1min

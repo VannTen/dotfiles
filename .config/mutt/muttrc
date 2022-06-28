@@ -48,8 +48,8 @@ macro index,pager s "<save-message><enter>" "Save message to default location"
 macro index,pager S "<save-message>" "Save message to mailbox"
 set confirmappend=no
 
-folder-hook . set signature=""
-folder-hook +work source '~/.config/mutt/work'
+set signature="$HOME/.config/mutt/signature"
+folder-hook +redhat source '~/.config/mutt/redhat'
 folder-hook +perso source '~/.config/mutt/perso'
 folder-hook +mailbox source '~/.config/mutt/mailbox'
 folder-hook +commun source '~/.config/mutt/commun'

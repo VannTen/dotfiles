@@ -1,0 +1,12 @@
+[Unit]
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mbsync -c %E/mbsync/config -V %i
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=default.target
