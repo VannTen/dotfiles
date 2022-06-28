@@ -12,5 +12,3 @@ done
 
 alias ls='ls --color=auto'
 PS1='[\u@\h $(kube_ps1) \W]\$ '
-
-PATH=${HOME}/opt/bin/:${PATH}
