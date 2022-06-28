@@ -43,6 +43,9 @@
 .config/user-dirs.locale
 .config/pulse/cookie
 
+# systemd user enabled units
+.config/systemd/user/*.wants/*
+
 # Firefox Policies && Arkenfox user.js override
 
 !/.mozilla/
