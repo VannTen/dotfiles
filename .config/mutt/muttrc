@@ -45,7 +45,8 @@ set sendmail="/usr/bin/msmtpq-systemd"
 folder-hook . 'set record=^'
 save-hook . '=%b/archive'
 macro index,pager s "<save-message><enter>" "Save message to default location"
-macro index,pager S "<save-message>" "Save message to mailbox"
+macro index <Esc>s "<tag-thread><tag-prefix><save-message><enter>" "Save thread to default location"
+bind index,pager S save-message
 set confirmappend=no
 
 folder-hook . set signature="$HOME/.config/mutt/signature"
