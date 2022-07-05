@@ -13,3 +13,8 @@ profile {
 	output "Samsung Electric Company S24D330 0x00005B55" position 0,0
 	output "Samsung Electric Company S24D330 H4ZKB01687" position 1920,0
 }
+
+profile {
+	output eDP-1 position 0,1440
+	output "Lenovo Group Limited P27h-20 V90776DG" position 0,0
+}
