@@ -1,0 +1,19 @@
+[general]
+status_path = "~/.local/state/vdirsyncer/status"
+
+[storage redhat_gcalendar]
+type = "google_calendar"
+token_file = "~/.local/state/vdirsyncer/gcalendar_oauth_tokens/redhat"
+client_id.fetch = ["command", "secret-tool", "lookup", "oauth", "client_id", "app", "vdirsyncer"]
+client_secret.fetch = ["command", "secret-tool", "lookup", "oauth", "client_secret", "app", "vdirsyncer"]
+
+[storage local_redhat]
+type = "filesystem"
+path = "~/.local/share/calendars/redhat"
+fileext = ".ics"
+
+[pair redhat_sync]
+a = "redhat_gcalendar"
+b = "local_redhat"
+collections = ["from a", "from b"]
+conflict_resolution = "a wins"
