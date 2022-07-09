@@ -14,7 +14,7 @@ set $term foot
 #
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu fuzzel --terminal=foot
+set $menu fuzzel --dpi-aware no --terminal=foot --font=monospace:size=16
 
 ### Idle configuration
  exec swayidle -w \
