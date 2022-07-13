@@ -1,1 +1,1 @@
-exec systemctl --user start sway-session.target
+exec systemctl --user start sway-session.target foot-server@${WAYLAND_DISPLAY}.socket

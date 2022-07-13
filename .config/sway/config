@@ -8,13 +8,13 @@ set $down j
 set $up k
 set $right l
 
-set $term foot
+set $term footclient
 
 # application launcher
 #
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu fuzzel --dpi-aware no --terminal=foot --font=monospace:size=16
+set $menu fuzzel --dpi-aware no --terminal=footclient --font=monospace:size=16
 
 ### Idle configuration
  exec swayidle -w \
