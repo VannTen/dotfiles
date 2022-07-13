@@ -1,6 +1,7 @@
 [Unit]
 Wants=network-online.target
 After=network-online.target
+PartOf=mail-sync@%i.target
 
 [Service]
 Type=oneshot
@@ -8,6 +9,7 @@ ExecStart=/usr/bin/mbsync -c %E/mbsync/config -V %i
 Restart=on-failure
 RestartSec=30
 SyslogIdentifier=mbsync-%i
+Slice=app-mailsync-%i.slice
 
 [Install]
-WantedBy=default.target
+RequiredBy=mail-sync@.target
