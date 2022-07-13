@@ -34,8 +34,9 @@ mailboxes `find ~/Mail -type d -name archive -prune -o -name cur -printf '"%h" '
 
 # Mailing lists
 
+subscribe @lists.archlinux.org
 lists libc-
-# 
+alternates @max.gautier.name max.gautier@redhat.com
 
 set my_mailboxes = "`find ~/Mail/commun -type d -name cur -printf '"%h" '`"
 set sendmail="/usr/bin/msmtpq-systemd"
