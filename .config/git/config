@@ -37,6 +37,8 @@
 
 [includeIf "gitdir:~/redhat/"]
     path = redhat
+[includeIf "gitdir:~/cncf/"]
+    path = redhat
 [includeIf "gitdir:~/perso/archlinux/"]
 	path = archlinux
 [merge]
