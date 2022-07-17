@@ -34,7 +34,7 @@ mailboxes `find ~/Mail -type d -name archive -prune -o -name cur -printf '"%h" '
 
 # Mailing lists
 
-subscribe @lists.archlinux.org
+subscribe @lists.archlinux.org isync-devel@lists.sourceforge.net
 lists libc-
 alternates @max.gautier.name max.gautier@redhat.com
 
