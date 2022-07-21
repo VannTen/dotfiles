@@ -1,0 +1,5 @@
+set allowautofocus false
+set editorcmd footclient \
+    --override=colors.alpha=0.8 \
+    --window-size-chars 70x6 \
+    --app-id tridactyl-vim-editor vim
