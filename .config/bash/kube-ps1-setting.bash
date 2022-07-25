@@ -1,1 +1,0 @@
-export KUBE_PS1_SYMBOL_ENABLE=false
