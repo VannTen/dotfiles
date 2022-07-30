@@ -52,3 +52,5 @@
 	defaultBranch = main
 [rebase]
 	autoSquash = true
+[checkout]
+	defaultRemote = origin
