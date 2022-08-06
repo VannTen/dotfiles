@@ -1,5 +1,11 @@
 set allowautofocus false
 set editorcmd footclient \
     --override=colors.alpha=0.8 \
-    --window-size-chars 70x6 \
+    --override=font=Monospace:size=11 \
+    --window-size-chars 100x12 \
     --app-id tridactyl-vim-editor vim
+set newtab about:blank
+blacklistadd meet.google.com
+
+bind ;gi js tri.excmds.hint("-c",tri.excmds.INPUTTAGS_selectors)
+bind # tab #
