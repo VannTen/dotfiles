@@ -9,3 +9,11 @@ blacklistadd meet.google.com
 
 bind ;gi js tri.excmds.hint("-c",tri.excmds.INPUTTAGS_selectors)
 bind # tab #
+
+# Searchs
+
+set searchurls.google https://www.google.com/search?q=
+set searchurls.wiki https://en.wikipedia.org/wiki/Special:Search/
+set searchurls.osm https://www.openstreetmap.org/search?query=
+set searchurls.gh https://github.com/search?utf8=✓&q=
+set searchurls.arch https://wiki.archlinux.org/title/Special:Search/
