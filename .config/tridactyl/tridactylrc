@@ -9,6 +9,7 @@ blacklistadd meet.google.com
 
 bind ;gi js tri.excmds.hint("-c",tri.excmds.INPUTTAGS_selectors)
 bind # tab #
+set smoothscroll true
 
 # Searchs
 
