@@ -11,12 +11,13 @@
 	br = branch
 	ctree = log --graph --all --oneline --decorate
 	update = submodule update --remote
-	lg1 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(auto)%s%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)' --all
-	lg2 = log --graph --format=format:'%C(yellow)%h%C(reset) %C(auto)%d%C(reset) %C(green)(%ar)%C(reset) %C(bold blue)<%an>%C(reset)%n %C(auto)%B%C(reset)' --all
+	lg1 = log --graph --format=format:'%C(auto)%h %d %s %C(green)(%ar) %C(bold blue)<%an>' --all
+	lg2 = log --graph --format=format:'%C(auto)%h %d %C(green)(%ar) %C(bold blue)<%an>%n%B' --all
 	clast = commit --amend --no-edit
 	subs = submodule foreach git
 	lg = log --oneline --graph --decorate
 	dupes = !"cd `pwd`/$GIT_PREFIX && git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
+	pr-clean = !"git push -d fork $(gh pr list --state merged --author @me --json headRefName --jq '.[].headRefName | select(test(\"master|main\") | not)')"
 [diff]
 	submodule = diff
 	tool = vimdiff
