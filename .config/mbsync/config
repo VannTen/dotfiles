@@ -1,9 +1,10 @@
 IMAPAccount gmail-work
 Host imap.gmail.com
 User magautie@redhat.com
-PassCmd "oauth2get gmail redhat"
+PassCmd "secret-tool lookup service imap provider gmail account redhat"
 SSLType IMAPS
-AuthMechs XOAUTH2
+AuthMechs PLAIN
+
 
 IMAPStore gmail-work
 Account gmail-work
@@ -31,9 +32,9 @@ SyncState *
 IMAPStore gmail-perso
 Host imap.gmail.com
 User ashelia1000@gmail.com
-PassCmd "oauth2get gmail perso"
+PassCmd "secret-tool lookup service imap provider gmail account perso"
 SSLType IMAPS
-AuthMechs XOAUTH2
+AuthMechs PLAIN
 
 MaildirStore perso
 SubFolders Verbatim

@@ -2,27 +2,24 @@ account redhat
 host smtp.gmail.com
 tls on
 tls_starttls off
-auth oauthbearer
+auth on
 user "magautie@redhat.com"
-passwordeval "oauth2get gmail redhat"
 from max.gautier@redhat.com
 
 account perso
 host smtp.gmail.com
 tls on
 tls_starttls off
-auth oauthbearer
+auth on
 user "ashelia1000@gmail.com"
-passwordeval "oauth2get gmail perso"
 from ashelia1000@gmail.com
 
 account commun
 host smtp.gmail.com
 tls on
 tls_starttls off
-auth oauthbearer
+auth on
 user "mabilatgautier@gmail.com"
-passwordeval "oauth2get gmail commun"
 from mabilatgautier@gmail.com
 
 account mailbox
