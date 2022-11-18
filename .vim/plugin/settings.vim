@@ -42,6 +42,7 @@ set foldenable
 set foldmethod=syntax
 set foldlevelstart=99
 
+set colorcolumn=+1
 set splitbelow
 set splitright
 
