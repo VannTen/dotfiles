@@ -5,6 +5,7 @@ function! s:on_lsp_buffer_enabled() abort
 	setlocal keywordprg=:LspHover
 	nmap <buffer> <C-]> <plug>(lsp-definition)
 	nmap <buffer> <f2> <plug>(lsp-rename)
+    nmap <buffer> * <plug>(lsp-next-reference)
 endfunction
 
 augroup lsp_install

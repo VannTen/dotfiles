@@ -24,6 +24,7 @@
 !.vim/vimrc
 !.vim/config/
 !.vim/plugin/
+!.vim/ftplugin/
 !.vim/syntax/
 !.vim/templates/
 !.vim/autoload/
