@@ -1,7 +1,6 @@
 # Git global ignore file
 
 # Ignore dotfiles by default
-.*
 *.[oa]
 *.so
 *.dep
@@ -11,11 +10,6 @@ a.out
 *.dSYM
 .dep
 
-# Do not ignore
-!.gitignore
-!.gitignore_global
-!.gitlab-ci*
-!.SRCINFO
 *.lldb
 # Tex intermediary files
 *.log
