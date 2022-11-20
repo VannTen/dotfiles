@@ -3,10 +3,10 @@ if exists('s:loaded')
 endif
 let s:loaded = 1
 
-if (executable('rls'))
+if (executable('rust-analyzer'))
   call lsp#register_server({
-      \ 'name': 'rls',
-      \ 'cmd': {server_info->['rls']},
+      \ 'name': 'Rust Language Server',
+      \ 'cmd': {server_info->['rust-analyzer']},
       \ 'whitelist': ['rust'],
       \ })
 endif
