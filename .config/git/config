@@ -17,7 +17,7 @@
 	subs = submodule foreach git
 	lg = log --oneline --graph --decorate
 	dupes = !"cd `pwd`/$GIT_PREFIX && git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
-	pr-clean = !"git push -d fork $(git branch --remote --merged main | grep fork | sed 's%fork/%%' | grep -v main);git branch --delete $(git branch --merged origin/main | grep -v main)"
+	pr-clean = !"git push -d fork $(git branch --remote --merged origin/HEAD | grep fork | sed 's%fork/%%' | grep -v -E 'main|master');git branch --delete $(git branch --merged origin/HEAD | grep -v -E 'main|master')"
     resu = reset --hard @{u}
 [diff]
 	submodule = diff
