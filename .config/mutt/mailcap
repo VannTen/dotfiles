@@ -2,6 +2,7 @@ text/html; firejail --quiet --net=none w3m -o display_link_number -I %{charset} 
 text/calendar; khal printics %s; copiousoutput
 image/*; imv -f %s
 application/pdf; zathura %s
+application/msword; libreoffice %s
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice %s
 application/vnd.ms-excel.sheet.macroenabled.12; libreoffice %s
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice %s
