@@ -2,7 +2,7 @@
 	name = Max Gautier
 	email = mg@max.gautier.name
 [core]
-	pager = less -+F-+X
+    pager = less -+F-+X --quit-if-one-screen
 [pager]
 	status = false
 [alias]
@@ -28,6 +28,7 @@
 [push]
 	default = upstream
 	recurseSubmodules = on-demand
+	gpgSign = if-asked
 [rerere]
 	enabled = true
 	autoupdate = true
@@ -59,3 +60,8 @@
 [safe]
 	directory = /home/max/contribs/glib
 	directory = /home/max/contribs/glib
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	defaultKeyCommand = git-get-agent-keys
+	allowedSignersFile = ~/.config/git/MY_SIGNER_KEYS
